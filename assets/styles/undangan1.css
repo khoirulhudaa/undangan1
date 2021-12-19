@@ -11,12 +11,70 @@ body {
     display: none;
 }
 
+.title2 {
+    display: none;
+}
+
+.open {
+    position: fixed;
+    margin-top: 0;
+    left: 0;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    z-index:99999;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    transition: 2s ease-in;
+}
+
+.closedd {
+    margin-top: -900px;
+    transition: 1.7s ease-in;
+}
+
+.open img {
+    width: 300px;
+}
+
+.kotak {
+    width: 250px;
+    height: max-content;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 1px solid 
+    rgba(245, 176, 203, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.open .title {
+    position: relative;
+    bottom: 0;
+    font-family: 'Playfair Display', serif;
+    left: 0;
+    color: 
+    rgba(93, 83, 74, 1);
+}
+
 .wrap-invitation {
     position: relative;
     height: 100vh;
     background-color: rgb(255, 255, 255);
     overflow-y: auto;
     width: 40vw;
+    overflow-x: hidden;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 1px 2px rgba(104, 104, 104, 0.07), 
@@ -49,7 +107,7 @@ body {
     width: 90px;
 }
 
-.title {
+.section1 .title {
     text-align: center;
     position: absolute;
     top: 120px;
@@ -59,12 +117,12 @@ body {
     font-family: 'Playfair Display', serif;
 }
 
-.title small {
+.section1 .title small {
     font-size: 1.6em;
     font-weight: normal;
 }
 
-.title h1 {
+.section1 .title h1 {
     font-size: 2.6em;
     width: max-content;
 }
@@ -142,9 +200,51 @@ body {
     width: 20px;
 }
 
+.modal i {
+    position: absolute;
+    top: 30px;
+    cursor: pointer;
+    right: 40px;
+    font-size: 26px;
+    color: rgb(70, 70, 70);
+    font-weight: normal;
+}
+
 .code-small small {
     font-weight: bold;
+    z-index: 
+    3333;
+    cursor: pointer;
     color: rgb(116, 116, 116);
+}
+
+.modal {
+    z-index: 9999;
+    width: 80%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal h3 {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    top: 25px;
+    font-size: 22px;
+}
+
+.modal img {
+    width: 90%;
+    height: 400px;
+    transform: scale(0.7);
+}
+
+.modal p {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    bottom: 15px;
+    width: 70%;
+    font-size: 17px;
 }
 
 .bunga-double {
@@ -595,6 +695,78 @@ body {
 /* kode css mobile */
 
 @media screen and (max-width: 620px) {
+
+    
+    .title2 {
+        display: inline;
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .open {
+        position: fixed;
+        margin-top: 0;
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100vh;
+        z-index:99999;
+        top: 50%;
+        display: flex;
+        background-color: rgb(255, 255, 255);
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .closedd {
+        margin-top: -100vh;
+        transition: 1.7s ease-in;
+    }
+
+    .open img {
+        width: 270px;
+    }
+
+    .open .btn-map {
+        height: 60px;
+    }
+
+    .kotak {
+        width: 250px;
+        height: max-content;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: 1px solid 
+        rgba(245, 176, 203, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        border-radius: 12px;
+        text-align: center;
+    }
+
+    .open .title {
+        position: relative;
+        width: 100vw;
+        left: 40%;
+        display: none;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: 
+        rgba(93, 83, 74, 1);
+    }
+
+    .modal img {
+        height: 60%;
+    }
+
+    .modal i {
+        top: 15px;
+        right: 20px;
+        font-size: 20px;
+    }
+
     .wrap-invitation {
         position: relative;
         height: 100vh;
@@ -677,7 +849,7 @@ body {
         font-weight: bold;
         font-size: 18px;
     }
-
+    
     .salam, .detail {
         text-align: center;
         font-family: 'Montserrat', sans-serif;
