@@ -709,6 +709,7 @@ body {
         margin-left: auto;
         margin-right: auto;
         height: 100vh;
+        padding-top: 60px;
         z-index:99999;
         top: 50%;
         display: flex;
